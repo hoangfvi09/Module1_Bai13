@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" type="text">
+<button onclick="check()">Check</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let input = document.getElementById('input').value.split('')
+        for (let i = 0; i < input.length; i++) {
+            if (input[i] === '-') {
+                input[i] = '_'
+            }
+            document.getElementById('result').innerHTML+=input[i]
+        }
+    }
+</script>
+</body>
+</html>

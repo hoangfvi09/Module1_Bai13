@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input1" type="text">
+<input id="input2" type="text">
+<button onclick="check()">Check</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let input1 = document.getElementById('input1').value
+        let input2 = document.getElementById('input2').value
+        let result
+        let count = 0
+        if (input1.length === input2.length) {
+            for (let i = 0; i < input1.length; i++) {
+                if (input1[i] === input2[i]) {
+                    count += 1
+                }
+            }
+            if (count === input1.length) {
+                result = 'hai chuoi giong nhau'
+            }
+            if (count!==input1.length){
+                result = 'hai chuoi ko giong nhau'
+            }
+        } else {
+            result = 'hai chuoi ko giong nhau'
+        }
+        document.getElementById('result').innerHTML = result
+    }
+</script>
+</body>
+
+</html>

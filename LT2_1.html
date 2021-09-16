@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let arr = [
+    [1, 2, 1, 24],
+    [8, 11, 9, 4],
+    [7, 0, 7, 27],
+    [7, 4, 28, 14],
+    [3, 10, 26, 7]
+    ];
+    let result=''
+    for (let m=0;m<5;m++){
+        result+='row '+m +'<br>'
+        for(let n=0;n<4;n++){
+            result+=arr[m][n]+'<br>'
+        }
+    }
+    document.getElementById('result').innerHTML=result
+</script>
+</body>
+</html>

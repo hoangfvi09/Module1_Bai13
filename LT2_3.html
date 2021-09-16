@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<p id="result"></p><br>
+<button onclick="add()" >Input</button>
+<button onclick="countNum()">Count number</button>
+<script>
+    let arr=[]
+    function add(){
+        arr.push(document.getElementById('input').value)
+        document.getElementById('result').innerHTML+=document.getElementById('input').value
+    }
+    let numArr='0123456789'
+    let count=0;
+    function countNum() {
+        for (let i = 0; i < arr.length; i++) {
+            if (numArr.includes(arr[i])) {
+                count += 1
+            }
+        }
+        alert(count)
+    }
+
+</script>
+</body>
+</html>

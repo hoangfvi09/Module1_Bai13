@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" type="text">
+<button onclick="check()">Check</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let input = document.getElementById('input').value
+        let arr = input.split(' ')
+        document.getElementById('result').innerHTML = "So tu la " + arr.length
+    }
+</script>
+</body>
+</html>
