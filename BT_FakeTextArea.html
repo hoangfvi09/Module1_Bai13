@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Fake Textarea</title>
+</head>
+<body>
+<h1>Type Anything Slowly</h1>
+<textarea id="input" rows="4" cols="50" onkeydown="exchangeText()"></textarea>
+<p id="result"></p>
+<script>
+    let m=0
+    let inp
+    let inputArr
+    let onScr = ["I"," ","'","M"," ","S","T","U","P","I","D","!"]
+    // let onScrArr
+    function exchangeText() {
+      document.getElementById('input').value=''
+        for(let i=0;i<=m%12;i++) {
+            document.getElementById('input').value += onScr[i%12]
+        }
+        m++
+    }
+</script>
+</body>
+</html>

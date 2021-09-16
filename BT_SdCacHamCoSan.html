@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su dung cac ham co san</title>
+</head>
+<body>
+Bai 1:
+<p id="result1"></p>
+Bai 2:
+<input type="text" id="bai2">
+<button onclick="oddEven()">Input</button>
+<p id="result2"></p>
+Bai 3:
+<p id="result3"></p>
+<script>
+    let myColor = ["Black", "Yellow", "Red", "Brown", "Gray"]
+    for (let i = 0; i < myColor.length; i++) {
+        document.getElementById("result1").innerHTML += myColor[i] + ', '
+    }
+    let numbers = []
+    alert(myColor.indexOf("White"))
+
+    function oddEven() {
+        let newString = document.getElementById("bai2").value.toString()
+        document.getElementsByClassName("result2").innerHTML= [newString[0]]
+        for (let i = 1; i < newString.length; i++) {
+            if ((newString[i - 1] % 2 === 0) && (newString[i] % 2 === 0)) {
+                document.getElementsByClassName("result2").innerHTML += "-" + newString[i]
+
+                // result.push('-')
+                // result.push(newString[i]);
+            } else {
+                document.getElementsByClassName("result2").innerHTML += newString[i]
+                // result.push(newString[i]);
+            }
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

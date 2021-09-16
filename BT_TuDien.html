@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập - Từ điển</title>
+</head>
+<body>
+<input id="dict" type="text">
+<button onclick="lookup(eng,vie)">Tu dien Anh - Viet</button>
+<button onclick="lookup(vie,eng)">Tu dien Viet - Anh</button>
+<p id="result"></p>
+<script>
+    let eng=['one','two','three','four','five','six']
+    let vie=['mot','hai','ba','bon','nam','sau']
+    function lookup(from,to){
+        let dict=document.getElementById("dict").value
+        if(from.includes(dict)){
+            for(let i=0;i<from.length;i++){
+                if(from[i]===dict){document.getElementById("result").innerHTML=dict + ' : ' +to[i]
+                }
+            }
+        }else{document.getElementById("result").innerHTML="Hong tim thay"
+        }
+    }
+
+
+
+</script>
+</body>
+</html>
